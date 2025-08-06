@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Morgan | Cinematic Video Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Orbitron:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Particle Background -->
+    <div id="particle-container"></div>
+
+    <!-- Navigation -->
+    <header class="fixed w-full z-50 py-4 px-6 bg-dark/80 backdrop-blur-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold font-orbitron">
+          <span class="holographic-text">ALEX</span>
+          <span class="text-tertiary">MORGAN</span>
+        </a>
+
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="#home"
+            class="text-tertiary hover:text-primary transition-all group"
+          >
+            <span class="group-hover:neon-glow">HOME</span>
+          </a>
+          <a
+            href="#about"
+            class="text-tertiary hover:text-primary transition-all group"
+          >
+            <span class="group-hover:neon-glow">ABOUT</span>
+          </a>
+          <a
+            href="#portfolio"
+            class="text-tertiary hover:text-primary transition-all group"
+          >
+            <span class="group-hover:neon-glow">PORTFOLIO</span>
+          </a>
+          <a
+            href="#timeline"
+            class="text-tertiary hover:text-primary transition-all group"
+          >
+            <span class="group-hover:neon-glow">TIMELINE</span>
+          </a>
+          <a
+            href="#contact"
+            class="text-tertiary hover:text-primary transition-all group"
+          >
+            <span class="group-hover:neon-glow">CONTACT</span>
+          </a>
+        </nav>
+
+        <button id="mobile-menu-button" class="md:hidden text-tertiary">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center relative overflow-hidden pt-16"
+    >
+      <video autoplay muted loop class="hero-video">
+        <source
+          src="https://assets.mixkit.co/videos/preview/mixkit-abstract-motion-design-background-1768-large.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="container mx-auto px-6 py-20 z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="text-center lg:text-left">
+            <h1
+              class="hero-heading text-4xl md:text-5xl lg:text-6xl font-bold font-montserrat mb-6"
+            >
+              <span class="glitch text-tertiary" data-text="CRAFTING VISUAL"
+                >CRAFTING VISUAL</span
+              ><br />
+              <span class="holographic-text">MASTERPIECES</span>
+            </h1>
+            <div
+              class="typewriter text-xl text-tertiary mb-10 font-orbitron"
+              id="typewriter"
+            >
+              Transforming visions into cinematic experiences
+            </div>
+            <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+              <a
+                href="#portfolio"
+                class="px-8 py-4 bg-primary text-dark font-bold rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-primary/30"
+              >
+                EXPLORE WORK
+              </a>
+              <a
+                href="#contact"
+                class="px-8 py-4 bg-transparent border-2 border-secondary text-tertiary font-bold rounded-lg hover:bg-secondary/10 transition-all duration-300 shadow-lg shadow-secondary/20"
+              >
+                CONTACT ME
+              </a>
+            </div>
+          </div>
+
+          <div class="flex justify-center">
+            <div
+              class="hologram-border rounded-xl w-full max-w-md h-80 flex items-center justify-center relative"
+            >
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                  class="w-48 h-48 rounded-full bg-primary/20 blur-3xl animate-pulse"
+                ></div>
+              </div>
+              <div class="relative z-10 text-center p-6">
+                <div
+                  class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-secondary/30"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                    alt="Alex Morgan"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-2xl font-bold text-tertiary mb-2">
+                  Alex Morgan
+                </h3>
+                <p class="text-secondary font-orbitron">
+                  CINEMATIC VIDEO EDITOR
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <a href="#about" class="text-secondary text-3xl">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-16 font-orbitron"
+        >
+          <span class="holographic-text">ABOUT ME</span>
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="hologram-border rounded-xl p-8">
+            <h3 class="text-2xl font-bold text-tertiary mb-4">
+              The Art of Visual Storytelling
+            </h3>
+            <p class="text-gray-300 mb-6">
+              I'm Alex Morgan, a cinematic video editor with over 8 years of
+              experience transforming raw footage into compelling visual
+              narratives. My passion lies in creating emotionally resonant
+              stories that captivate audiences and leave lasting impressions.
+            </p>
+            <p class="text-gray-300 mb-8">
+              Specializing in narrative film editing, color grading, and motion
+              graphics, I approach each project with a director's eye and an
+              editor's precision. My work spans feature films, commercials,
+              music videos, and corporate storytelling.
+            </p>
+
+            <div class="mb-8">
+              <h4 class="text-xl font-bold text-tertiary mb-6">
+                Technical Mastery
+              </h4>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center mr-3"
+                  >
+                    <i class="fas fa-play-circle text-secondary"></i>
+                  </div>
+                  <span class="text-tertiary">Premiere Pro</span>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center mr-3"
+                  >
+                    <i class="fas fa-film text-secondary"></i>
+                  </div>
+                  <span class="text-tertiary">DaVinci Resolve</span>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center mr-3"
+                  >
+                    <i class="fas fa-star text-secondary"></i>
+                  </div>
+                  <span class="text-tertiary">After Effects</span>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center mr-3"
+                  >
+                    <i class="fas fa-cube text-secondary"></i>
+                  </div>
+                  <span class="text-tertiary">Cinema 4D</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-radar relative">
+            <div
+              class="absolute inset-0 rounded-xl border border-secondary/30 flex items-center justify-center"
+            >
+              <div
+                class="w-4/5 h-4/5 border border-secondary/20 rounded-full"
+              ></div>
+              <div
+                class="w-3/5 h-3/5 border border-secondary/20 rounded-full"
+              ></div>
+              <div
+                class="w-2/5 h-2/5 border border-secondary/20 rounded-full"
+              ></div>
+              <div
+                class="w-1/5 h-1/5 border border-secondary/20 rounded-full"
+              ></div>
+              <div class="radar-sweep"></div>
+
+              <!-- Skill Points -->
+              <div class="absolute" style="top: 20%; left: 50%">
+                <div class="w-4 h-4 bg-primary rounded-full"></div>
+                <div class="text-xs text-tertiary mt-2">Editing</div>
+              </div>
+              <div class="absolute" style="top: 50%; left: 75%">
+                <div class="w-4 h-4 bg-primary rounded-full"></div>
+                <div class="text-xs text-tertiary mt-2">Color Grading</div>
+              </div>
+              <div class="absolute" style="top: 70%; left: 40%">
+                <div class="w-4 h-4 bg-primary rounded-full"></div>
+                <div class="text-xs text-tertiary mt-2">Motion Graphics</div>
+              </div>
+              <div class="absolute" style="top: 40%; left: 30%">
+                <div class="w-4 h-4 bg-primary rounded-full"></div>
+                <div class="text-xs text-tertiary mt-2">Visual Effects</div>
+              </div>
+              <div class="absolute" style="top: 60%; left: 60%">
+                <div class="w-4 h-4 bg-primary rounded-full"></div>
+                <div class="text-xs text-tertiary mt-2">Sound Design</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section
+      id="portfolio"
+      class="py-20 bg-gradient-to-b from-dark to-[#070710]"
+    >
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-4 font-orbitron"
+        >
+          <span class="holographic-text">CINEMATIC PORTFOLIO</span>
+        </h2>
+        <p class="text-secondary text-center mb-16">
+          Selected works that showcase my editing expertise
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div
+              class="project-card-inner hologram-border rounded-xl overflow-hidden"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  alt="Project 1"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold text-tertiary">
+                      Mountain Dreams
+                    </h3>
+                    <p class="text-secondary">Documentary Short Film</p>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-4 right-4 w-12 h-12 rounded-full bg-primary flex items-center justify-center"
+                >
+                  <i class="fas fa-play text-dark"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-300 mb-4">
+                  A cinematic journey through the world's most breathtaking
+                  mountain landscapes.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs"
+                    >Cinematic</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs"
+                    >Color Grading</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs"
+                    >Documentary</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div
+              class="project-card-inner hologram-border rounded-xl overflow-hidden"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  alt="Project 2"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold text-tertiary">
+                      Urban Rhythms
+                    </h3>
+                    <p class="text-secondary">Music Video</p>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-4 right-4 w-12 h-12 rounded-full bg-primary flex items-center justify-center"
+                >
+                  <i class="fas fa-play text-dark"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-300 mb-4">
+                  High-energy editing that transforms cityscapes into visual
+                  music.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs"
+                    >Dynamic</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs"
+                    >Rhythmic</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs"
+                    >Motion Graphics</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div
+              class="project-card-inner hologram-border rounded-xl overflow-hidden"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  alt="Project 3"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold text-tertiary">
+                      Tech Revolution
+                    </h3>
+                    <p class="text-secondary">Corporate Brand Film</p>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-4 right-4 w-12 h-12 rounded-full bg-primary flex items-center justify-center"
+                >
+                  <i class="fas fa-play text-dark"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-300 mb-4">
+                  Futuristic editing for a tech company's revolutionary product
+                  launch.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs"
+                    >Corporate</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs"
+                    >Visual Effects</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs"
+                    >3D Animation</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="px-8 py-3 border-2 border-secondary text-tertiary font-bold rounded-lg hover:bg-secondary/10 transition-all duration-300"
+          >
+            VIEW ALL PROJECTS
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center mb-16 font-orbitron"
+        >
+          <span class="holographic-text">PROFESSIONAL TIMELINE</span>
+        </h2>
+
+        <div class="max-w-3xl mx-auto">
+          <div class="timeline-item">
+            <h3 class="text-xl font-bold text-tertiary mb-2">
+              Lead Video Editor
+            </h3>
+            <p class="text-secondary font-orbitron mb-2">
+              CINEMATIC STUDIOS | 2021-Present
+            </p>
+            <p class="text-gray-300">
+              Oversee post-production for feature films and commercials,
+              managing editing teams and maintaining creative vision.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3 class="text-xl font-bold text-tertiary mb-2">Senior Editor</h3>
+            <p class="text-secondary font-orbitron mb-2">
+              VISUAL IMPACT MEDIA | 2018-2021
+            </p>
+            <p class="text-gray-300">
+              Created award-winning commercials and music videos for
+              international clients, specializing in visual effects.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3 class="text-xl font-bold text-tertiary mb-2">Video Editor</h3>
+            <p class="text-secondary font-orbitron mb-2">
+              CREATIVE MOTION | 2015-2018
+            </p>
+            <p class="text-gray-300">
+              Developed editing skills across various genres, from documentary
+              to corporate storytelling.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3 class="text-xl font-bold text-tertiary mb-2">
+              Film Production Degree
+            </h3>
+            <p class="text-secondary font-orbitron mb-2">
+              CINEMA ARTS ACADEMY | 2011-2015
+            </p>
+            <p class="text-gray-300">
+              Specialized in editing and post-production techniques with a focus
+              on digital storytelling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-4 font-orbitron"
+          >
+            <span class="holographic-text">LET'S CREATE TOGETHER</span>
+          </h2>
+          <p class="text-secondary text-center mb-12">
+            Have a project in mind? Get in touch to discuss how we can bring
+            your vision to life.
+          </p>
+
+          <div class="hologram-border rounded-xl p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-2xl font-bold text-tertiary mb-6">
+                  Contact Information
+                </h3>
+
+                <div class="space-y-6 mb-8">
+                  <div class="flex items-start">
+                    <div class="text-secondary text-xl mr-4 mt-1">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-lg font-bold text-tertiary mb-1">
+                        Email
+                      </h4>
+                      <p class="text-gray-300">alex@cinematiceditor.com</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start">
+                    <div class="text-secondary text-xl mr-4 mt-1">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-lg font-bold text-tertiary mb-1">
+                        Location
+                      </h4>
+                      <p class="text-gray-300">Los Angeles, California</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start">
+                    <div class="text-secondary text-xl mr-4 mt-1">
+                      <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-lg font-bold text-tertiary mb-1">
+                        Phone
+                      </h4>
+                      <p class="text-gray-300">+1 (555) 123-4567</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-lg font-bold text-tertiary mb-4">
+                    Connect With Me
+                  </h4>
+                  <div class="flex space-x-4">
+                    <a href="#" class="social-hover text-2xl text-secondary">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-hover text-2xl text-secondary">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-hover text-2xl text-secondary">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-hover text-2xl text-secondary">
+                      <i class="fab fa-vimeo-v"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <form class="space-y-6">
+                  <div>
+                    <label for="name" class="block text-tertiary mb-2"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      class="contact-input w-full p-3 rounded-lg"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="email" class="block text-tertiary mb-2"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="contact-input w-full p-3 rounded-lg"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="message" class="block text-tertiary mb-2"
+                      >Your Project Details</label
+                    >
+                    <textarea
+                      id="message"
+                      rows="5"
+                      class="contact-input w-full p-3 rounded-lg"
+                      placeholder="Tell me about your project"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="w-full py-3 bg-gradient-to-r from-primary to-secondary text-dark font-bold rounded-lg hover:opacity-90 transition-all"
+                  >
+                    SEND MESSAGE
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-secondary/20">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-left mb-6 md:mb-0">
+            <a href="#" class="text-xl font-bold font-orbitron">
+              <span class="holographic-text">ALEX</span>
+              <span class="text-tertiary">MORGAN</span>
+            </a>
+            <p class="text-gray-500 mt-2">
+              Cinematic Video Editor & Visual Storyteller
+            </p>
+          </div>
+
+          <div class="text-gray-500 text-sm">
+            &copy; 2023 Alex Morgan. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
